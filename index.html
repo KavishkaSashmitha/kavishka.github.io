@@ -418,7 +418,7 @@ https://www.tooplate.com/view/2115-marvel
               <h2 class="mb-4">Interested to work together? Let's talk</h2>
 
               <form
-                action="https://docs.google.com/forms/d/e/1FAIpQLScM9g0Q0ZdmXsTD-R8tPIzmRWPsPIwYPgQZlnqD_ohY_QyABA/viewform?usp=sf_link"
+                action="https://docs.google.com/forms/d/e/1FAIpQLScM9g0Q0ZdmXsTD-R8tPIzmRWPsPIwYPgQZlnqD_ohY_QyABA/formResponse"
                 method="POST"
               >
                 <div class="row">
@@ -427,8 +427,10 @@ https://www.tooplate.com/view/2115-marvel
                       type="text"
                       class="form-control"
                       name="entry.1958927128"
+                      placeholder="Your Name"
+                      id="name"
+                      required
                     />
-                    <placeholder ="Your Name" id="name" />
                   </div>
 
                   <div class="col-lg-6 col-12">
@@ -436,25 +438,28 @@ https://www.tooplate.com/view/2115-marvel
                       type="email"
                       class="form-control"
                       name="entry.1173977296"
+                      placeholder="Email"
+                      id="email"
+                      required
                     />
-                    <placeholder ="Email" id="email" />
                   </div>
 
                   <div class="col-12">
-                    <textarea name="entry.596402219">
-                      <rows="6"
+                    <textarea
+                      name="entry.596402219"
+                      rows="6"
                       class="form-control"
                       id="message"
                       placeholder="Message"
-                    ></textarea
-                    >
+                      required
+                    ></textarea>
                   </div>
 
                   <div class="ml-lg-auto col-lg-5 col-12">
                     <input
                       type="submit"
                       class="form-control submit-btn"
-                      value="Send Button"
+                      value="Send"
                     />
                   </div>
                 </div>
