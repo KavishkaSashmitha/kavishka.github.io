@@ -4,14 +4,14 @@
     "description": "This Enhance users Food Ordering system Locally",
     "status": "ongoing",
     "previewUrl": "https://ambasewanasl.netlify.app",
-    "sourceUrl": "https://github.com/Univara/univara.github.io"
+    "sourceUrl": "https://github.com/Univara/Ambasewana.github.io"
   },
   {
     "title": "E-Commerce",
     "description": "Herbal Selling Website With 8 Main  Management Function.",
     "status": "done",
     "previewUrl": "https://herbalheaven.netlify.app/",
-    "sourceUrl": "https://github.com/Univara/univara.github.io"
+    "sourceUrl": "https://github.com/KavishkaSashmitha/HerbalHeaven"
   },
   {
     "title": "One Page Website",
@@ -24,7 +24,7 @@
     "title": "Quick Fly",
     "description": "Airline Reservation System Helps to Book Flights",
     "status": "done",
-    "previewUrl": "http://univara.web.lk/",
+    "previewUrl": "#",
     "sourceUrl": "https://github.com/Univara/univara.github.io"
   }
 ]
