@@ -138,7 +138,7 @@ https://www.tooplate.com/view/2115-marvel
           <div class="col-lg-5 col-md-12 col-12">
             <div class="about-image svg">
               <img
-                src="images/undraw/undraw_software_engineer_lvl5.svg"
+                src="images/profile-pic (2).png"
                 class="img-fluid"
                 alt="svg image"
               />
@@ -187,6 +187,27 @@ https://www.tooplate.com/view/2115-marvel
         </div>
       </div>
     </section>
+    <!-- SKILLS -->
+    <section class="skills py-5" id="skills">
+      <div class="container">
+        <h2 class="text-center">Skills</h2>
+        <div class="row" id="skillsContainer"></div>
+      </div>
+    </section>
+
+    <section class="journey py-5" id="journey">
+      <div class="container">
+        <h2 class="text-center">My Journey</h2>
+        <div class="row" id="journeyContainer"></div>
+      </div>
+    </section>
+
+    <section class="books py-5" id="books">
+      <div class="container">
+        <h2 class="text-center">Books I Read</h2>
+        <div class="row" id="booksContainer"></div>
+      </div>
+    </section>
 
     <!-- JavaScript to load projects from JSON -->
     <script>
@@ -201,38 +222,115 @@ https://www.tooplate.com/view/2115-marvel
 
             data.forEach((project) => {
               const projectCard = `
-                <div
-                  class="col-lg-4 col-md-6 mb-4 project-card"
-                  data-status="${project.status}"
-                  data-title="${project.title}"
-                  data-description="${project.description}"
-                >
-                  <div class="card shadow-sm">
-                    <div class="card-body">
-                      <h5 class="card-title">${project.title}</h5>
-                      <p class="card-text">${project.description}</p>
-                      <button
-                        class="btn custom-btn custom-btn-bg custom-btn-link"
-                        onclick="showPreview('${project.previewUrl}')"
-                      >
-                        Preview
-                      </button>
-                      <a
-                        href="${project.sourceUrl}"
-                        class="btn mr-lg-2 custom-btn"
-                      ><i class="fa-solid fa-code"></i>Source</a>
+                  <div
+                    class="col-lg-4 col-md-6 mb-4 project-card"
+                    data-status="${project.status}"
+                    data-title="${project.title}"
+                    data-description="${project.description}"
+                  >
+                    <div class="card shadow-sm">
+                      <div class="card-body">
+                        <h5 class="card-title">${project.title}</h5>
+                        <p class="card-text">${project.description}</p>
+                        <button
+                          class="btn custom-btn custom-btn-bg custom-btn-link"
+                          onclick="showPreview('${project.previewUrl}')"
+                        >
+                          Preview
+                        </button>
+                        <a
+                          href="${project.sourceUrl}"
+                          class="btn mr-lg-2 custom-btn"
+                        ><i class="fa-solid fa-code"></i>Source</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              `;
+                `;
               projectsContainer.innerHTML += projectCard;
             });
           })
           .catch((error) => console.error('Error loading projects:', error));
       }
 
-      // Call loadProjects on page load
-      document.addEventListener('DOMContentLoaded', loadProjects);
+      // Function to fetch and display skills
+      function loadSkills() {
+        fetch('skills.json')
+          .then((response) => response.json())
+          .then((data) => {
+            const skillsContainer = document.getElementById('skillsContainer');
+            skillsContainer.innerHTML = ''; // Clear any existing skills
+
+            data.forEach((skill) => {
+              const skillItem = `
+              <li class="skill-item">
+                <i class="${skill.icon}"></i> ${skill.name}  ${skill.level}
+              </li>
+            `;
+              skillsContainer.innerHTML += skillItem;
+            });
+          })
+          .catch((error) => console.error('Error loading skills:', error));
+      }
+      // Function to fetch and display My Journey section with images and experiences
+      function loadJourney() {
+        fetch('journey.json')
+          .then((response) => response.json())
+          .then((data) => {
+            const journeyContainer =
+              document.getElementById('journeyContainer');
+            journeyContainer.innerHTML = ''; // Clear any existing journey items
+
+            data.forEach((journey) => {
+              const journeyItem = `
+                  <div class="journey-item">
+                    <img src="${journey.image}" alt="${journey.title}" class="img-fluid"/>
+                    <h5>${journey.title}</h5>
+                    <p>${journey.description}</p>
+                  </div>
+                `;
+              journeyContainer.innerHTML += journeyItem;
+            });
+          })
+          .catch((error) => console.error('Error loading journey:', error));
+      }
+
+      // Function to fetch and display books
+      function loadBooks() {
+        fetch('books.json')
+          .then((response) => response.json())
+          .then((data) => {
+            const booksContainer = document.getElementById('booksContainer');
+            booksContainer.innerHTML = ''; // Clear any existing books
+
+            data.forEach((book) => {
+              const bookItem = `
+                  <div class="book-item">
+                    <img src="${book.image}" alt="${book.title}" class="img-fluid"/>
+                    <h4>${book.title}</h4>
+                    <p>by ${book.author}</p>
+                    <h6>${book.status}</h6>
+                  </div>
+                `;
+              booksContainer.innerHTML += bookItem;
+            });
+          })
+          .catch((error) => console.error('Error loading books:', error));
+      }
+
+      // Function to show project preview in iframe
+      function showPreview(previewUrl) {
+        const previewFrame = document.getElementById('previewFrame');
+        previewFrame.src = previewUrl;
+        document.getElementById('previewSection').style.display = 'block';
+      }
+
+      // Call functions on page load
+      document.addEventListener('DOMContentLoaded', function () {
+        loadProjects();
+        loadSkills();
+        loadJourney();
+        loadBooks();
+      });
     </script>
 
     <!-- FEATURES -->

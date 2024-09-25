@@ -616,3 +616,202 @@ strong {
 .slider img.active {
   display: block;
 }
+/* Skills Section Styles */
+.skills {
+  background-color: #ffffff;
+  color: #1c1c1c;
+}
+
+.skills h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.skill-item {
+  font-size: 1.2rem;
+  padding: 10px;
+  position: relative;
+  list-style-type: none;
+}
+
+.skill-item i {
+  color: #00bfff; /* Checkmark icon color */
+  margin-right: 10px;
+}
+
+/* Journey Section Styles */
+.journey {
+  background-color: #ffffff;
+  color: #0c0c0d;
+}
+
+.journey h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.journey-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.journey-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.journey-content {
+  margin-top: 10px;
+}
+
+/* Books Section Styles */
+.books {
+  background-color: #ffffff;
+  color: #1c1c1c;
+}
+
+.books h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-item {
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 80%;
+  text-align: center;
+}
+
+.book-item h5 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.book-item p {
+  font-size: 1rem;
+  color: #aaaaaa; /* Slightly lighter color for author names */
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .journey-item {
+    flex: 1;
+    margin: 0 15px;
+  }
+
+  .book-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .book-item {
+    width: calc(33% - 40px); /* 3 items per row with spacing */
+    margin: 10px;
+  }
+}
+/* Skills Section Dark Mode Styles */
+.dark-mode .skills {
+  background-color: #0c0c0d; /* Dark background */
+  color: #f0f0f0; /* Light text color */
+}
+
+.dark-mode .skills h2 {
+  color: #ffc200; /* Highlighted heading color */
+}
+
+/* Journey Section Dark Mode Styles */
+.dark-mode .journey {
+  background-color: #0c0c0d; /* Dark background */
+  color: #f0f0f0; /* Light text color */
+}
+
+.dark-mode .journey h2 {
+  color: #ffc200; /* Highlighted heading color */
+}
+
+/* Books Section Dark Mode Styles */
+.dark-mode .books {
+  background-color: #0c0c0d; /* Dark background */
+  color: #f0f0f0; /* Light text color */
+}
+
+.dark-mode .books h2 {
+  color: #ffc200; /* Highlighted heading color */
+}
+
+.dark-mode .book-item {
+  background-color: #2c2c2c; /* Dark background for book items */
+  color: #f0f0f0; /* Light text color for book items */
+  border: 1px solid #474559; /* Optional border for definition */
+}
+
+.dark-mode .book-item h5 {
+  color: #ffc200; /* Highlighted heading color for book titles */
+}
+
+.dark-mode .book-item p {
+  color: #aaaaaa; /* Slightly lighter color for author names */
+}
+
+/* Ensure the journey item image looks good in dark mode */
+.dark-mode .journey-item img {
+  filter: brightness(0.8); /* Optional: adjust brightness of images */
+}
+.journey-item {
+  padding: 15px;
+  border-radius: 5px;
+
+  margin: 10px 0;
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition for effects */
+}
+
+.journey-item:hover {
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+}
+
+/* Smooth expansion animation */
+.journey-content {
+  display: none; /* Hidden by default */
+  overflow: hidden; /* Prevent overflow */
+  transition: max-height 0.5s ease; /* Animate height change */
+  max-height: 0; /* Start at zero */
+}
+
+.journey-item.active .journey-content {
+  display: block; /* Show details */
+  max-height: 200px; /* Maximum height to expand to */
+}
+.book-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition for effects */
+}
+
+.book-item:hover {
+  transform: scale(1.05); /* Grow effect */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+.skill-item {
+  padding: 15px;
+  border-radius: 5px;
+
+  margin: 10px 0;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px); /* Lift effect */
+}

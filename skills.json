@@ -1,0 +1,21 @@
+[
+  { "name": "JavaScript", "level": "", "icon": "fa-brands fa-js" },
+  { "name": "React", "level": "", "icon": "fa-brands fa-react" },
+  { "name": "Node.js", "level": "", "icon": "fa-brands fa-node-js" },
+  { "name": "HTML5", "level": "", "icon": "fa-brands fa-html5" },
+  { "name": "CSS3", "level": "", "icon": "fa-brands fa-css3-alt" },
+  { "name": "MongoDB", "level": "", "icon": "fa-brands fa-database" },
+  { "name": "Express.js", "level": "", "icon": "fa-brands fa-node-js" },
+  { "name": "PHP", "level": "", "icon": "fa-brands fa-php" },
+  { "name": "Firebase", "level": "", "icon": "fa-brands fa-fire" },
+  { "name": "React Native", "level": "", "icon": "fa-brands fa-react" },
+  { "name": "Flutter", "level": "", "icon": "fa-brands fa-android" },
+  { "name": "Figma", "level": "", "icon": "fa-brands fa-figma" },
+  { "name": "API Integration", "level": "", "icon": "fa-solid fa-plug" },
+  { "name": "Web Hosting (Vercel)", "level": "", "icon": "fa-solid fa-cloud" },
+  { "name": "Tailwind CSS", "level": "", "icon": "fa-brands fa-css3-alt" },
+  { "name": "Photoshop", "level": "", "icon": "fa-brands fa-photoshop" },
+  { "name": "Canva", "level": "", "icon": "fa-brands fa-canva" },
+  { "name": "Java", "level": "", "icon": "fa-brands fa-java" },
+  { "name": "Kotlin", "level": "", "icon": "fa-brands fa-android" }
+]
