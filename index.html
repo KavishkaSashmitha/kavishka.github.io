@@ -473,50 +473,50 @@ https://www.tooplate.com/view/2115-marvel
           .catch((error) => console.error('Error loading skills:', error));
       }
       // Function to fetch and display My Journey section with images and experiences
-      function loadJourney() {
-        fetch('journey.json')
-          .then((response) => response.json())
-          .then((data) => {
-            const journeyContainer =
-              document.getElementById('journeyContainer');
-            journeyContainer.innerHTML = ''; // Clear any existing journey items
+      // function loadJourney() {
+      //   fetch('journey.json')
+      //     .then((response) => response.json())
+      //     .then((data) => {
+      //       const journeyContainer =
+      //         document.getElementById('journeyContainer');
+      //       journeyContainer.innerHTML = ''; // Clear any existing journey items
 
-            data.forEach((journey) => {
-              const journeyItem = `
-                  <div class="journey-item">
-                    <img src="${journey.image}" alt="${journey.title}" class="img-fluid"/>
-                    <h5>${journey.title}</h5>
-                    <p>${journey.description}</p>
-                  </div>
-                `;
-              journeyContainer.innerHTML += journeyItem;
-            });
-          })
-          .catch((error) => console.error('Error loading journey:', error));
-      }
+      //       data.forEach((journey) => {
+      //         const journeyItem = `
+      //             <div class="journey-item">
+      //               <img src="${journey.image}" alt="${journey.title}" class="img-fluid"/>
+      //               <h5>${journey.title}</h5>
+      //               <p>${journey.description}</p>
+      //             </div>
+      //           `;
+      //         journeyContainer.innerHTML += journeyItem;
+      //       });
+      //     })
+      //     .catch((error) => console.error('Error loading journey:', error));
+      // }
 
       // Function to fetch and display books
-      function loadBooks() {
-        fetch('books.json')
-          .then((response) => response.json())
-          .then((data) => {
-            const booksContainer = document.getElementById('booksContainer');
-            booksContainer.innerHTML = ''; // Clear any existing books
+      // function loadBooks() {
+      //   fetch('books.json')
+      //     .then((response) => response.json())
+      //     .then((data) => {
+      //       const booksContainer = document.getElementById('booksContainer');
+      //       booksContainer.innerHTML = ''; // Clear any existing books
 
-            data.forEach((book) => {
-              const bookItem = `
-                  <div class="book-item">
-                    <img src="${book.image}" alt="${book.title}" class="img-fluid"/>
-                    <h4>${book.title}</h4>
-                    <p>by ${book.author}</p>
-                    <h6>${book.status}</h6>
-                  </div>
-                `;
-              booksContainer.innerHTML += bookItem;
-            });
-          })
-          .catch((error) => console.error('Error loading books:', error));
-      }
+      //       data.forEach((book) => {
+      //         const bookItem = `
+      //             <div class="book-item">
+      //               <img src="${book.image}" alt="${book.title}" class="img-fluid"/>
+      //               <h4>${book.title}</h4>
+      //               <p>by ${book.author}</p>
+      //               <h6>${book.status}</h6>
+      //             </div>
+      //           `;
+      //         booksContainer.innerHTML += bookItem;
+      //       });
+      //     })
+      //     .catch((error) => console.error('Error loading books:', error));
+      // }
 
       // Function to show project preview in iframe
       function showPreview(previewUrl) {
